@@ -50,7 +50,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # own apps
+    "foodness_recipes",
     "foodness_users",
+    "foodness_utils",
 ]
 
 MIDDLEWARE = [
