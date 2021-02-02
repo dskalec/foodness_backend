@@ -59,6 +59,10 @@ class SlugMixin(models.Model):
 
 
 class PublishDateMixin(models.Model):
+    """
+    Mixin for adding fields about the objects' publication status and date.
+    """
+
     publish_from = models.DateTimeField(
         verbose_name=_("Publish date"), null=True, blank=True, db_index=True
     )
@@ -82,6 +86,10 @@ class PublishDateMixin(models.Model):
 
 
 class CreatedDateMixin(models.Model):
+    """
+    Mixin for adding fields about the model creation and change date.
+    """
+
     created_date = models.DateTimeField(
         verbose_name=_("Created date"), auto_now_add=True
     )
@@ -97,6 +105,10 @@ class CreatedDateMixin(models.Model):
 
 
 class OrderMixin(models.Model):
+    """
+    Mixin for adding the `order` field that defaults to 0.
+    """
+
     order = models.PositiveIntegerField(verbose_name=_("Order"), default=0)
 
     class Meta:
